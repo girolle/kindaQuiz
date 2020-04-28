@@ -19,6 +19,11 @@ $("#q4")[0].style.width = quizWidth;
 $("#q5")[0].style.width = quizWidth;
 $("#q6")[0].style.width = quizWidth;
 $("#q7")[0].style.width = quizWidth;
+$("#q8")[0].style.width = quizWidth;
+$("#q9")[0].style.width = quizWidth;
+$("#q10")[0].style.width = quizWidth;
+$("#finish")[0].style.width = quizWidth;
+
 
 
 
