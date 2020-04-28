@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+
+  }
+  
+  html {
+	height: 99%;
+	margin: 0;
+  }
+
+  body {
+	background-color: rgb(229, 246, 255);
+	margin: 0 auto 10%;
+	font-family: VTB, Arial, Helvetica, sans-serif;
+	text-align: center;
+  }
+  
+  #logo {
+	position: fixed;
+	right: 0;
+	height: 15vh;
+  }
+
+  @font-face {
+    font-family: VTB;
+	src: url('VTB65.ttf');
+  }
+
+
+  .quiz-box {
+	  position: relative;
+	  top: 15vh;
+	  width: 60%;
+	  background-color: white;
+	  margin: auto auto 100px;
+	  display: none;
+	  box-shadow: 0 0 10px rgb(0, 40, 130);
+	  height: auto;
+  }
+  h1 {
+	  color: black;
+	  text-align: left;
+		margin: 0 8% 0 ;
+		
+  }
+  h2 {
+	color: grey;
+	text-align: left;
+	  margin: 20px 30px 5px;
+}
+  .quiz-img {
+	  width: 80%;
+	  margin: 5% auto 2%;
+	  border: 1px solid black;
+ }
+
+ .ans-box {
+	 border: 1px solid white;
+	 width: 80%;
+	 margin: 0 auto;
+
+ }
+
+ .ans-button {
+	 height: auto;
+	 margin: 0 auto;
+	 background-color: rgb(0, 40, 130);
+	 text-align: left;
+	 padding: 15px 10px;
+	 color: white;
+ }
+ .bottom-border {
+	 border-bottom: 1px solid white;
+ }
+
+ .next-button{
+	 width: 120px;
+	 height: auto;
+	 padding: 10px 30px;
+	 margin: 30px 0 40px auto;
+	 background-color: grey;
+	 text-align: right;
+	 right: 0;
+	 color: white;
+	 font-size: small;
+ }
