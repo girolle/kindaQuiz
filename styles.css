@@ -30,7 +30,18 @@
 	src: url('VTB65.ttf');
   }
 
+  @font-face {
+    font-family: VTBs;
+	src: url('VTB55.ttf');
+  }
 
+
+  p{
+	  margin: 5px;
+  }
+  a{
+	  color: black;
+  }
   .quiz-box {
 	  position: relative;
 	  top: 15vh;
@@ -62,6 +73,8 @@
 	 border: 1px solid white;
 	 width: 80%;
 	 margin: 0 auto;
+	 font-family: VTBs, Arial, Helvetica, sans-serif;
+
 
  }
 

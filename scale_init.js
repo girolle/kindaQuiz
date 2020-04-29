@@ -9,19 +9,10 @@ var h1Size;
 if (parseInt(quizWidth) / 15 > 30 ) {h1Size = 30 + "px";}
 else {h1Size = (parseInt(quizWidth) / 20) + "px";}
 
+for (let j = 0; j <=10; j+=1) {
+	$("#q" + j)[0].style.width = quizWidth;
+}
 
-
-$("#q0")[0].style.width = quizWidth;
-$("#q1")[0].style.width = quizWidth;
-$("#q2")[0].style.width = quizWidth;
-$("#q3")[0].style.width = quizWidth;
-$("#q4")[0].style.width = quizWidth;
-$("#q5")[0].style.width = quizWidth;
-$("#q6")[0].style.width = quizWidth;
-$("#q7")[0].style.width = quizWidth;
-$("#q8")[0].style.width = quizWidth;
-$("#q9")[0].style.width = quizWidth;
-$("#q10")[0].style.width = quizWidth;
 $("#finish")[0].style.width = quizWidth;
 
 

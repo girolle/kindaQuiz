@@ -37,7 +37,7 @@ function quizBoxInit(id){
 	mouseOnElement($("#next_"+id));
 }
 
-texts = [["Сейчас будет тест"], [
+texts = [["Уверены, что вы знаете о цифровом мире почти все?"], [
 	"Сколько пользователей было в первый год работы Twitter после запуска социальной сети в 2006 году программистом-недоучкой Джеком Дорси?", 
 	"1000", "5000", "20000", "100000", 3
 ], 
@@ -122,13 +122,39 @@ function clickAns(id) {
 	}
 }
 
+function points(s){
+	if (s == 1) {return("1 балл");}
+	else if (s > 1 && s < 5) {return(s + " балла");}
+	else  {return(s + " баллов");}
+
+}
+
 function exit(){
 	box = $("#finish");
 	box.append($('<h1>', {id: 'finish-text'}));
 	$('#finish-text')[0].style.marginTop = "50px";
 	$('#finish-text')[0].style.fontSize = h1Size;
-	$('#finish-text')[0].innerText = "Ваш счет: " + score;
-	box.append($('<img>',{id:('img_final'),src:('images/finished.png'), class:"quiz-img"}));
+	$('#finish-text')[0].innerText = "Вы набрали " + points(score);
+//	box.append($('<img>',{id:('img_final'),src:('images/finished.png'), class:"quiz-img"}));
+	box.append($('<div>', {id: ('text-box'), class:"ans-box"}));
+	$("#text-box")[0].style.marginTop = "50px";
+	$("#text-box")[0].style.marginBottom = "50px";
+	$("#text-box")[0].style.height= "auto";
+	$("#text-box")[0].style.backgroundColor = "rgb(230, 230, 230)";
+	$("#text-box").append($('<p>', {id: 'text'}));
+	$('#text')[0].style.fontSize = parseInt(h1Size)/1.25 + "px";
+	$('#text')[0].style.marginTop = "20px";
+	$('#text')[0].style.marginBottom = "20px";
+
+	if (score <=5){
+	$('#text')[0].innerHTML = "Хммммм, возможно, что-то пошло не так… <p></p><a href = https://girolle.github.io/kindaQuiz/> Попробуйте еще раз:) </a>";
+	}
+	else if (score <= 7){
+		$('#text')[0].innerHTML = "Поздравляем! Хороший результат, но вам есть куда расширять ваш кругозор<p></p> Кстати о кругозоре, знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
+	}
+	else { 
+		$('#text')[0].innerHTML = "Поздравляем! Вы супер-молодец!	<p></p> Вы знаете почти все о цифровом современном мире. <p></p>А знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
+	}
 	box[0].style.display = "inline-block";
 }
 
