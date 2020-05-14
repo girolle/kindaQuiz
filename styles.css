@@ -101,3 +101,48 @@
 	 color: white;
 	 font-size: small;
  }
+
+ #finish {
+	 height: 60vh;
+ }
+
+ form {
+	position: absolute;
+	margin: 50px auto;
+	transform: translate(-50%, -50%);
+	top: 62%;
+	left: 50%;
+	width: 300px;
+	height: 60px;
+  }
+
+  input {
+	position: absolute;
+	margin: 10vh auto;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	height: 75%;
+  }
+
+  #email-text{
+	left: 40%;
+	width: 70%;
+	border: 2px solid rgb(0, 170, 255);
+	border-radius: 6px;
+	padding: 10px;
+  }
+
+
+  #email-button{
+	left: 86%;
+	width: 18%;
+	border: 2px solid rgb(0, 170, 255);
+	background-color: rgb(0, 170, 255);
+	background-image: url("images/send-button.png");
+	background-position: center;
+	background-size: contain;
+
+	background-repeat: no-repeat;
+	border-radius: 6px;
+
+}

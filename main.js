@@ -95,7 +95,7 @@ function start(){
 }
 
 function clickAns(id) {
-	if (id == 11) {exit(); return;}
+	if (id == 1) {exit(); return;}
 	let box = $("#q" + id);
 	box[0].style.display = "inline-block";
 	let ans = texts[id][5];
@@ -137,20 +137,28 @@ function exit(){
 	$('#finish-text')[0].innerText = "Вы набрали " + points(score);
 //	box.append($('<img>',{id:('img_final'),src:('images/finished.png'), class:"quiz-img"}));
 	box.append($('<div>', {id: ('text-box'), class:"ans-box"}));
-	$("#text-box")[0].style.marginTop = "50px";
-	$("#text-box")[0].style.marginBottom = "50px";
-	$("#text-box")[0].style.height= "auto";
-	$("#text-box")[0].style.backgroundColor = "rgb(230, 230, 230)";
+	$('#text-box')[0].style.position = "absolute";
+	$('#text-box')[0].style.transform = "translate(-50%, -50%)";
+	$('#text-box')[0].style.width = "100%";
+	$('#text-box')[0].style.top = "50%";
+	$('#text-box')[0].style.left = "50%";
+	$("#text-box")[0].style.height= "60%";
+	$("#text-box")[0].style.backgroundColor = "rgba(0, 170, 255, 0.3)";
 	$("#text-box").append($('<p>', {id: 'text'}));
-	$('#text')[0].style.fontSize = parseInt(h1Size)/1.25 + "px";
-	$('#text')[0].style.marginTop = "20px";
-	$('#text')[0].style.marginBottom = "20px";
+	$('#text')[0].style.position = "absolute";
+	$('#text')[0].style.fontSize = parseInt(h1Size)/1.2 + "px";
+	$('#text')[0].style.transform = "translate(-50%, -50%)";
+	$('#text')[0].style.width = "80%";
+	$('#text')[0].style.top = "50%";
+	$('#text')[0].style.left = "50%";
 
-	if (score <=5){
+
+
+/*	if (score <=5){
 	$('#text')[0].innerHTML = "Хммммм, возможно, что-то пошло не так… <p></p><a href = https://girolle.github.io/kindaQuiz/> Попробуйте еще раз:) </a>";
 	}
-	else if (score <= 7){
-		$('#text')[0].innerHTML = "Поздравляем! Хороший результат, но вам есть куда расширять ваш кругозор<p></p> Кстати о кругозоре, знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
+	else */if (score <= 7){
+		$('#text')[0].innerHTML = "Поздравляем! Хороший результат, но вам есть куда расширять ваш кругозор.<p></p> Кстати о кругозоре, знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
 	}
 	else { 
 		$('#text')[0].innerHTML = "Поздравляем! Вы супер-молодец!	<p></p> Вы знаете почти все о цифровом современном мире. <p></p>А знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
@@ -159,3 +167,22 @@ function exit(){
 }
 
 start(0);
+
+function emailForm(){
+	var form = document.createElement('form');
+	form.action = 'send.php';
+	form.method='post';
+	$("#finish").append(form);
+	var input = document.createElement('input');
+	input.id = "email-text";
+	input.type = 'text';
+	input.name = 'email';
+	input.placeholder="Укажите ваш email";
+	form.append(input);
+	var button = document.createElement('input');
+	button.type = "submit";
+	button.id="email-button";
+	button.value = " ";
+	form.append(button);
+}
+emailForm();
