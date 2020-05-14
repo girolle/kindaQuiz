@@ -95,7 +95,7 @@ function start(){
 }
 
 function clickAns(id) {
-	if (id == 1) {exit(); return;}
+	if (id == 11) {exit(); return;}
 	let box = $("#q" + id);
 	box[0].style.display = "inline-block";
 	let ans = texts[id][5];
@@ -154,10 +154,10 @@ function exit(){
 
 
 
-/*	if (score <=5){
+	if (score <=5){
 	$('#text')[0].innerHTML = "Хммммм, возможно, что-то пошло не так… <p></p><a href = https://girolle.github.io/kindaQuiz/> Попробуйте еще раз:) </a>";
 	}
-	else */if (score <= 7){
+	else if (score <= 7){
 		$('#text')[0].innerHTML = "Поздравляем! Хороший результат, но вам есть куда расширять ваш кругозор.<p></p> Кстати о кругозоре, знаете ли вы, что приложение мобильной бухгалтерии Цифра только за первый месяц скачали более 30 000 пользователей, и оно уверенно вошло в ТОП-30 AppStore сервисов по скачиваниям! <p></p>В чем фишка? Читайте по <a href = 'https://rb.ru/longread/cifra/'> ссылке </a>";
 	}
 	else { 
